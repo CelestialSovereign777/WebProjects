@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CTU-Buddy | Discussions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1 class="header-title">CTU-Buddy</h1>
+    <br>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="discussions.html">Discussion</a></li>
+        <li><a href="share-resources.html">Share Resources</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Color Pickers (you can keep this) -->
+  <button id="toggleButton">Toggle Color Pickers</button>
+  <br>
+  <div id="colorPickers" class="hidden">
+    <label for="firstGradientColorPicker">First Gradient Color:</label>
+    <input type="color" id="firstGradientColorPicker">
+    <br>
+    <label for="secondGradientColorPicker">Second Gradient Color:</label>
+    <input type="color" id="secondGradientColorPicker">
+    <br>
+    <label for="textColorPicker">Text Color:</label>
+    <input type="color" id="textColorPicker">
+    <br>
+    <!-- Add preset color buttons -->
+    <div id="presetColors">
+      <button class="preset-color" data-color="#ff0000"></button>
+      <button class="preset-color" data-color="#000000"></button>
+      <button class="preset-color" data-color="#008000"></button>
+      <button class="preset-color" data-color="#800080"></button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Discussion Form -->
+    <section class="discussion-form">
+      <h2>Ask a Question</h2>
+      <form>
+        <!-- Username Input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required maxlength="32">
+
+        <!-- Question Textarea -->
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" rows="4" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Discussion Threads -->
+    <section class="discussion-threads">
+      <!-- Thread 1 -->
+      <div class="thread">
+        <div class="user-info">
+          <img src="Images/user1.jpg" alt="User1">
+          <p>Bart Terry</p>
+        </div>
+        <div class="thread-content">
+          <h3>Question:</h3>
+          <p>Are the robotics classes taken in Class 3 or 4?</p>
+          <!-- View Replies Button -->
+          <a href="#" class="expand-btn">View Replies (1)</a>
+
+          <!-- Replies Container -->
+          <div class="replies">
+            <!-- Reply 1 -->
+            <div class="user-info">
+              <img src="Images/user2.jpg" alt="User2">
+              <p>Jane Doe</p>
+            </div>
+            <div class="reply-content">
+              <p>As far as I know, robotics classes are taken in Class 4.</p>
+            </div>
+
+            <!-- Add more replies here if needed -->
+
+          </div>
+          <div class="mod-tools">
+            <a href="#" class="report-btn">Report</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </div>
+
+          <!-- Reply Form -->
+          <form class="reply-form">
+            <label for="reply">Your Reply:</label>
+            <textarea class="reply-textarea" rows="2"></textarea>
+            <button type="submit">Submit Reply</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Thread 2 -->
+      <div class="thread">
+        <h1>thread1</h1>
+      </div>
+      <div class="thread">
+        <h1>thread2</h1>
+      </div>
+      <div class="thread">
+        <h1>thread3</h1>
+      </div>
+      <div class="thread">
+        <h1>thread4</h1>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 CTU-Buddy | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

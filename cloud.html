@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-Buddy | Share-Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label.upload-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #206480;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        label.upload-btn:hover {
+            background-color: #02213a;
+        }
+
+        #file-label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+  </style>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 50px;
+  }
+
+  button#downloadButton {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #206480;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  button#downloadButton:hover {
+      background-color: #02213a;
+  }
+</style>
+
+<style>
+  .file-item {
+      margin-bottom: 10px;
+  }
+
+  .file-button {
+      color: #fff;
+      background-color: #0c2f53;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <h1 class="header-title">CTU-Buddy</h1>
+    <br>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="discussions.html">Discussion</a></li>
+        <li><a href="share-resources.html">Share Resources</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h3>A place to share, upload and/or files with other buddies or the university </h3>
+  <br>
+  <h3>Catergories</h3>
+ <section class = "index-catergory">
+  <A href="rd.html" class="index-catergory-box">
+    <div class="dark-overlay"></div>
+   <h3>Robotics development</h3>
+  </a>
+ <A href="cw.html" class="index-catergory-box">
+  <div class="dark-overlay"></div>
+    <h3>Core Web Development</h3>
+ </a>
+
+ <a href="ethics.html"class="index-catergory-box">
+  <div class="dark-overlay"></div>
+    <h3>Ethics</h3>
+ </a>
+
+  <A href="cloud.html" class="index-catergory-box">
+    <div class="dark-overlay"></div>
+    <h3>Cloud Fundementals</h3>
+  </a>
+ </section>
+
+ <h3 ><u>Cloud Fundementals</u></h3>
+ <br>
+<h3>Welcome to Cloud Fundamentals - CF412 module. Azure is a cloud computing platform with an ever-expanding set of services to help you build solutions to meet your business goals. Azure services range from simple web services for hosting your business presence in the cloud to running fully virtualized computers for you to run your custom software solutions. Azure provides a wealth of cloud-based services like remote storage, database hosting, and centralized account management. Azure also offers new capabilities like AI and Internet of Things (IoT).</h3>
+</ul>
+
+
+<!--UPLOAD BUTTON-->
+<h1>Upload Files</h1>
+<label for="file" class="upload-btn">Choose Files</label>
+<input type="file" id="file" style="display: none;" multiple onchange="handleFileUpload(this)">
+<div id="file-list" class="file-list"></div>
+
+<script>
+    const localStorageKey = 'fileUpload_' + window.location.pathname.replace(/\//g, ''); // Dynamically generate a unique key based on the page URL
+
+    function handleFileUpload(input) {
+        const fileListContainer = document.getElementById('file-list');
+
+        if (input.files.length > 0) {
+            const files = Array.from(input.files);
+
+            // Retrieve existing files from Local Storage
+            const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+            // Process each file
+            files.forEach((file) => {
+                // Read the file content as a Data URL (Base64-encoded)
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const fileData = e.target.result;
+
+                    // Add the new file data to the list
+                    storedFiles.push({
+                        name: file.name,
+                        type: file.type,
+                        data: fileData
+                    });
+
+                    // Save the updated file list to Local Storage
+                    localStorage.setItem(localStorageKey, JSON.stringify(storedFiles));
+
+                    // Display the list of uploaded files
+                    displayFileList(fileListContainer);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        }
+    }
+
+    function displayFileList(container) {
+        container.innerHTML = '';
+
+        // Retrieve and parse stored file data when the page loads
+        const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+        storedFiles.forEach((file, index) => {
+            const listItem = document.createElement('div');
+            listItem.classList.add('file-item');
+            listItem.innerHTML = `
+                <button class="file-button" onclick="downloadFile(${index})">${file.name}</button>
+            `;
+            container.appendChild(listItem);
+        });
+    }
+
+    function downloadFile(index) {
+        // Retrieve stored files
+        const storedFiles = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+        // Create a data URI from the Base64 data
+        const dataUri = storedFiles[index].data;
+
+        // Create a download link and trigger the download
+        const link = document.createElement('a');
+        link.href = dataUri;
+        link.download = storedFiles[index].name;
+        document.body.appendChild(link);
+        link.click();
+
+        // Clean up
+        document.body.removeChild(link);
+    }
+
+    // Initial display of past uploaded files
+    displayFileList(document.getElementById('file-list'));
+</script>
+
+
+
+<!--DOWNLOAD BUTTON-->
+<h1>Download a File</h1>
+<button id="downloadButton">Download PDF File</button>
+
+<script>
+    document.getElementById('downloadButton').addEventListener('click', function () {
+       
+        var fileUrl = 'cloud fundementals.pdf';
+
+        var a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = 'cloud fundementals.pdf';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+</script>
+
+</body>
+</html>

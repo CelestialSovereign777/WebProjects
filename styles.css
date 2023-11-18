@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Global Styles */
+body {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  margin: 0;
+  padding: 0;
+}
+
+#toggleButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2; /* Ensure the button appears above other elements */
+}
+
+.hidden {
+  display: none;
+}
+
+#colorPickers {
+  position: fixed; /* Change position to fixed */
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  left: 20px; /* Adjust the distance from the left as needed */
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the box shadow as needed */
+  text-decoration: underline;
+  color: #000000; /* Text color for the color pickers */
+}
+
+
+/* Header Styles */
+header {
+  /* background-image: linear-gradient(to right,royalblue 25%, turquoise 75%); */
+  padding: 10px;
+  text-align: center;
+}
+
+#HeroHeader{
+  /* color: yellow; */
+  text-shadow: 1px 1px green;
+  /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+}
+
+#features{
+  text-align: center;
+  /* color: yellow; */
+  text-shadow: 1px 1px green;
+  /* background-image: linear-gradient(to right,royalblue 15%, turquoise 85%); */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#H-Top{
+  text-align: center;
+  font-size: larger;
+  /* color: yellow; */
+  text-shadow: 3px 3px red;
+  /* background-image: linear-gradient(to right,royalblue 10%, turquoise 90%); */
+}
+
+#H-Top img{
+  width: 80%;
+  max-height: 400px;
+  box-shadow: 2px 2px green;
+}
+
+#ST-Head{
+  text-shadow: 2px 2px yellowgreen;  
+}
+
+#testimonials{
+  text-align: center;
+  /* color: yellow; */
+  /* background-image: linear-gradient(to right,royalblue 5%, turquoise 95%); */
+  text-shadow: 1px 1px green;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+  
+.header-title {
+  /* color: yellow; */
+  text-shadow: 3px 3px red;
+}
+
+#video {
+  text-align: center;
+  /* color: yellow; */
+  /* background-image: linear-gradient(to right,royalblue 0%, turquoise 100%); */
+  text-shadow: 1px 1px green;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#ABp {
+  /* color: rgb(255, 238, 0); */
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#CU-Links{
+  font-weight: 300;
+  /* color: yellow; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#SM-links{
+  color: white;
+}
+
+#AU-Cl{
+  /* color: yellow; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#CU-text{
+  /* color: yellow; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#Locale-link{
+  /* color: yellow; */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #0056b3; /* Slightly darker blue for navigation bar */
+  margin-bottom: 20px; /* Add spacing between header and navigation */
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 10px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #004080; /* Darker shade of blue on hover */
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  background-color: #e6f3ff; /* Light blue for main content background */
+}
+
+/* Discussion Form Styles */
+.discussion-form {
+  margin-bottom: 20px; /* Add spacing between form and threads */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  margin-bottom: 5px;
+  text-align: center; /* Center the label text */
+}
+
+form input[type="text"] {
+  width: 100%;
+  max-width: 300px; /* Limit username input to a maximum of 32 characters */
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+form textarea {
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Discussion Threads Styles */
+.discussion-threads {
+  margin-top: 20px; /* Add spacing between threads and footer */
+}
+
+.thread {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  margin-right: 10px;
+}
+
+.user-info img {
+  width: 40px; /* Adjust the size of profile pictures */
+  height: 40px; /* Adjust the size of profile pictures */
+  border-radius: 50%;
+}
+
+.thread-content {
+  flex: 1;
+}
+
+.thread-content h3 {
+  margin-bottom: 5px;
+}
+
+.thread-content p {
+  margin-bottom: 10px;
+}
+
+.thread-content a {
+  color: #007bff;
+}
+
+/* Report Post Widget */
+.report-widget {
+  margin-left: auto;
+  margin-right: 0; /* Ensure the widget is aligned to the right */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #007bff; /* Blue color for the footer */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+/* Additional CSS for Pseudo-Moderation Tools */
+.replies {
+  display: none;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.expand-btn {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.mod-tools {
+  display: none;
+  margin-top: 10px;
+}
+
+.mod-tools a {
+  margin-right: 10px;
+  color: #e74c3c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Additional CSS for Interactive Elements */
+.show-replies .replies {
+  display: block;
+}
+
+.show-mod-tools .mod-tools {
+  display: block;
+}
+
+ul li a {
+  display: block;
+  padding: 20px 25px;
+  color: #fffb00;
+  text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+  }
+
+ul li ul.dropdown li {
+  display: block;
+  }
+  
+ul li ul.dropdown {
+  width: 100%;
+  background: #22438C;
+  position: absolute;
+  z-index: 999;
+  display: none;
+  
+  }
+  ul li a:hover{
+  background: #112C66;
+  }
+
+  body {
+    transition: background-color 0.5s;
+}
+
+.color-preset {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    padding: 20px; 
+    margin: 10px; 
+}
+.sidebar {
+width: 250px;
+height: 100%;
+background-color: #3b3232;
+color: #536fcc;
+transition: transform 0.3s ease;
+transform: translateX(-250px); /* Initially hidden */
+}
+.sidebar.show-sidebar {
+transform: translateX(0);
+}
+#toggleButton{
+    height: 45px;
+    color: azure;
+    background-color: rgb(53, 52, 52);
+}
+
+.text-color-picker {
+    display: block;
+    margin-top: 10px;
+}
+
+.color-preset {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.text-color-preset {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc; 
+  border-radius: 10px;
+  padding: 20px; 
+  margin: 10px; 
+}
+
+
+
+
+/* Add this CSS to your existing CSS */
+.preset-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Style the preset colors */
+.preset-color[data-color="#ff0000"] {
+  background-color: #ff0000;
+}
+
+.preset-color[data-color="#000000"] {
+  background-color: #000000;
+}
+
+.preset-color[data-color="#008000"] {
+  background-color: #008000;
+}
+
+.preset-color[data-color="#800080"] {
+  background-color: #800080;
+}
+
+
+
+
+/* Add your existing styles here */
+
+/* Style for discussion threads */
+.discussion-threads {
+  margin-top: 20px;
+}
+
+.thread {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.thread h3 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* Style for replies */
+.replies {
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.reply-form {
+  margin-top: 10px;
+}
+
+
+

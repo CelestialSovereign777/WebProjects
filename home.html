@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-Buddy - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add your CSS stylesheets here for custom styling -->
+</head>
+<body>
+    <header>
+        <h1 class="header-title">CTU-Buddy</h1>
+        <br>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="discussions.html">Discussion</a></li>
+                <li><a href="share-resources.html">Share Resources</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <header id="HeroHeader">
+        <img src="MicrosoftTeams-image.png" alt="CTU-Buddy Hero Image" height="200" width="600">
+        <h1 id="Welcome">Welcome to CTU-Buddy</h1>
+        <h2>Your Ultimate University Companion</h2>
+    </header>
+
+    <button id="toggleButton">Toggle Color Pickers</button>
+    <br>
+    <div id="colorPickers" class="hidden">
+        <label for="firstGradientColorPicker">First Gradient Color:</label>
+        <input type="color" id="firstGradientColorPicker">
+        <br>
+        <label for="secondGradientColorPicker">Second Gradient Color:</label>
+        <input type="color" id="secondGradientColorPicker">
+        <br>
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker">
+        <br>
+        <!-- Add preset color buttons -->
+        <div id="presetColors">
+            <button class="preset-color" data-color="#ff0000"></button>
+            <button class="preset-color" data-color="#000000"></button>
+            <button class="preset-color" data-color="#008000"></button>
+            <button class="preset-color" data-color="#800080"></button>
+        </div>
+
+    </div>
+
+
+    <br>
+    <div id="H-Top">
+        <h1>City Technical University</h1>
+        <img src="Images/CampusBuilding.jpg" alt="CampusBuilding">
+    </div>
+
+    <br>
+
+    <!-- Key Features Section -->
+    <section id="features">
+        
+        <h2>Features To Note!</h2>
+        <div class="feature" >
+            <h3>Navigation Bar</h3>
+            <p>Aestheticly pleasing and user friendly navigation bar to help guide you through all the content needed for your educational advernture!</p>
+            <img height="300" src="Images/feature 1.png" alt="Feature 1">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="feature">
+            <h3>Discussion Page</h3>
+            <p>Kind and helpful community. Get help from other students and/or lectures on the site to assist you with any difficulties you may encounter making your experience more enjoyable!</p>
+            <img height="300" src="Images/feature 2.png" alt="Feature 2">
+        </div>
+        <!-- Add more feature elements as needed -->
+    </section>
+
+    <br>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <blockquote>
+                
+"I can't thank CTU-Buddy enough for making my university experience a breeze! As a student juggling multiple courses and assignments, their platform streamlined everything for me. The user-friendly interface made it incredibly easy to access course materials, submit assignments, and communicate with professors and classmates. The interactive features and study tools also enhanced my learning process and helped me grasp complex concepts with ease. CTU-Buddy truly became my go-to resource throughout my university journey, saving me time and reducing stress. I highly recommend it to any student looking to excel academically and efficiently manage their coursework. Thank you for creating such a valuable platform!"
+            </blockquote>
+            <cite>- John Doe, Student</cite>
+        </div>
+        <!-- Add more testimonial elements as needed -->
+    </section>
+
+    <br>
+
+    <!-- Explainer Video Section -->
+    <section id="video">
+        <h2>See How CTU-Buddy Works</h2>
+        <div class="video-wrapper">
+            <!-- Embed your explainer video here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <script src="script.js"></script>
+</body>
+</html>

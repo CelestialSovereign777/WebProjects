@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-Buddy | Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .timetable th, .timetable td {
+            border: 10px solid #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .timetable th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(161, 245, 245);
+        }
+
+        tr:nth-child(odd) {
+            background-color: violet;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timetable td, .timetable th {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">CTU-Buddy</h1>
+        <br>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="discussions.html">Discussion</a></li>
+                <li><a href="share-resources.html">Share Resources</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+            </nav>
+        </header>
+        <button id="toggleButton">Toggle Color Pickers</button>
+    <br>
+    <div id="colorPickers" class="hidden">
+        <label for="firstGradientColorPicker">First Gradient Color:</label>
+        <input type="color" id="firstGradientColorPicker">
+        <br>
+        <label for="secondGradientColorPicker">Second Gradient Color:</label>
+        <input type="color" id="secondGradientColorPicker">
+        <br>
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker">
+        <br>
+        <!-- Add preset color buttons -->
+        <div id="presetColors">
+            <button class="preset-color" data-color="#ff0000"></button>
+            <button class="preset-color" data-color="#000000"></button>
+            <button class="preset-color" data-color="#008000"></button>
+            <button class="preset-color" data-color="#800080"></button>
+        </div>
+
+    </div>
+
+    <h1 id="ST-Head">Semester Timetable</h1>
+    <table class="timetable">
+        <tr>
+            <th>Time/Day</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>08:00 - 09:00</td>
+            <td>RD412 Theory</td>
+            <td>RD412 Practical</td>
+            <td>ENA412 Theory</td>
+            <td>ENA412 Practical</td>
+            <td>Group</td>
+        </tr>
+        <tr>
+            <td>09:00 - 10:00</td>
+            <td>RD412 Theory</td>
+            <td>RD412 Practical</td>
+            <td>ENA412 Theory</td>
+            <td>ENA412 Practical</td>
+            <td>CF412 Theory</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td>RD412 Theory</td>
+            <td>RD412 Practical</td>
+            <td>ENA412 Theory</td>
+            <td>ENA412 Practical</td>
+            <td>CF412 Practical</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td>Group</td>
+            <td>Group</td>
+            <td>ENA412 Theory</td>
+            <td>Group</td>
+            <td>CF412 Practical</td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:00</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13:00 - 14:00</td>
+            <td>CW412 Theory</td>
+            <td>ITS</td>
+            <td>ENA412 Practical</td>
+            <td>ENA412 Practical</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14:00 - 15:00</td>
+            <td>CW412 Practical</td>
+            <td>ITS</td>
+            <td>ENA412 Practical</td>
+            <td>ENA412 Practical</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15:00 - 16:00</td>
+            <td>CW412 Practical</td>
+            <td>ITS</td>
+            <td>ENA412 Practical</td>
+            <td>ENA412 Practical</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
