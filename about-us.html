@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            transition: background-color 0.5s;
+            color: black; /* Default text color */
+        }
+
+    </style>
+</head>
+<header>
+<h1 class="header-title">CTU-Buddy</h1>
+<nav>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="discussions.html">Discussion</a></li>
+        <li><a href="share-resources.html">Share Resources</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+</nav>
+</header>
+<button id="toggleButton">Toggle Color Pickers</button>
+    <br>
+    <div id="colorPickers" class="hidden">
+        <label for="firstGradientColorPicker">First Gradient Color:</label>
+        <input type="color" id="firstGradientColorPicker">
+        <br>
+        <label for="secondGradientColorPicker">Second Gradient Color:</label>
+        <input type="color" id="secondGradientColorPicker">
+        <br>
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker">
+        <br>
+        <!-- Add preset color buttons -->
+        <div id="presetColors">
+            <button class="preset-color" data-color="#ff0000"></button>
+            <button class="preset-color" data-color="#000000"></button>
+            <button class="preset-color" data-color="#008000"></button>
+            <button class="preset-color" data-color="#800080"></button>
+        </div>
+
+    </div>
+<body>
+
+<div class="section">
+    <h4>Vision:</h4>
+    <p>Our vision is to empower students and educators with innovative technology, fostering a collaborative learning environment that promotes knowledge sharing and academic excellence. We envision CTU-Buddy as a go-to platform for academic support and resource exchange, enhancing the overall educational experience.</p>
+</div>
+
+<div class="section">
+    <h4>Mission:</h4>
+    <p>Our mission is to provide a seamless and intuitive interface where students and educators can access their timetables, participate in discussions, and share study materials effortlessly. We are committed to maintaining a reliable and secure platform that enhances productivity and connectivity within the academic community.</p>
+</div>
+
+<div class="section">
+    <h4>Meet the Team:</h4>
+    <div>
+        <p><strong>- Kade:</strong> The visionary leader of CTU-Buddy, Kade is passionate about technology and education. With a background in software development, Kade's expertise drives the innovation and functionality of the platform.</p>
+        <p><strong>- Matthew:</strong> As the creative mind behind CTU-Buddy's user interface, Matthew ensures an engaging and intuitive user experience. His design skills and attention to detail make navigation a breeze.</p>
+        <p><strong>- Mohammed:</strong> The technical guru of the team, Mohammed handles the back-end development and database management. His dedication ensures the platform's stability and scalability.</p>
+        <p><strong>- Tshiamo:</strong> An integral part of the CTU-Buddy team, Tshiamo works on implementing and testing new features. With a strong focus on quality assurance, Tshiamo ensures a bug-free and reliable system.</p>
+        <p><strong>- Trenton:</strong> Our community liaison, Trenton fosters connections with users and gathers valuable feedback to continuously improve CTU-Buddy. His dedication to user satisfaction drives us to excel.</p>
+    </div>
+</div>
+
+<div class="section">
+    <p>Together, we are the CTU-Buddy team, committed to providing an exceptional academic platform for students and educators alike. Thank you for being a part of our journey towards educational excellence!</p>
+</div>
+
+<div class="section">
+    <p>Please feel free to reach out to us through the Contact Us page with any questions or suggestions. We value your input and are excited to have you as a part of our CTU-Buddy community. Happy learning!</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+<footer>
+<p>&copy; 2023 CTU-Buddy | All rights reserved by BlackHatSociety</p>
+</footer>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-Buddy | Share-Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script src="java.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="header-title">CTU-Buddy</h1>
+    <br>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="discussions.html">Discussion</a></li>
+        <li><a href="share-resources.html">Share Resources</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <button id="toggleButton">Toggle Color Pickers</button>
+    <br>
+    <div id="colorPickers" class="hidden">
+        <label for="firstGradientColorPicker">First Gradient Color:</label>
+        <input type="color" id="firstGradientColorPicker">
+        <br>
+        <label for="secondGradientColorPicker">Second Gradient Color:</label>
+        <input type="color" id="secondGradientColorPicker">
+        <br>
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker">
+        <br>
+        <!-- Add preset color buttons -->
+        <div id="presetColors">
+            <button class="preset-color" data-color="#ff0000"></button>
+            <button class="preset-color" data-color="#000000"></button>
+            <button class="preset-color" data-color="#008000"></button>
+            <button class="preset-color" data-color="#800080"></button>
+        </div>
+
+    </div>
+
+  <h3>A place to share, upload and/or files with other buddies or the university </h3>
+  <br>
+  <h3>Catergories</h3>
+ <section class = "index-catergory">
+  <A href="rd.html" class="index-catergory-box">
+    <div class="dark-overlay"></div>
+   <h3>Robotics development</h3>
+  </a>
+ <A href="cw.html" class="index-catergory-box">
+  <div class="dark-overlay"></div>
+    <h3>Core Web Development</h3>
+ </a>
+
+ <a href="ethics.html"class="index-catergory-box">
+  <div class="dark-overlay"></div>
+    <h3>Ethics</h3>
+ </a>
+
+  <A href="cloud.html" class="index-catergory-box">
+    <div class="dark-overlay"></div>
+    <h3>Cloud Fundementals</h3>
+  </a>
+ </section>
+</ul>
+<script src="script.js"></script>
+</body>
+</html>

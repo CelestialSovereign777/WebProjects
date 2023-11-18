@@ -1,0 +1,79 @@
+h3 {
+    font-size: 15px;
+    line-height: 32px;
+    color: #fffb01;
+    font-family: Arial;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: -2px 2px 4px black;
+    z-index: 100;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.index-catergory{
+    width: 100%;
+    padding:60px 0;
+   
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    color:rgb(251, 255, 0);
+    
+}
+
+.dark-overlay{
+    position: absolute ;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: black;
+    opacity:0.5 ;
+}
+
+.index-catergory-box:hover .dark-overlay{
+opacity:0 ;
+transition: all ease-in-out 200ms;
+}
+
+.index-catergory-box{
+   width:140px;
+   height:140px;
+   background-color: deepskyblue;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 10   ;
+
+}
+.index-catergory-box:nth-child(1){
+   background-image: url(Images/robot.webp);
+   color:white;
+}
+
+.index-catergory-box:nth-child(2){
+   background-image: url(Images/webdev.avif);
+}
+.index-catergory-box:nth-child(3){
+   background-image: url(Images/ethics.jpeg);
+}
+.index-catergory-box:nth-child(4){
+   background-image: url(Images/cloud1.jpg);
+}
+.btn{
+   padding: 0.5rem 2rem;
+   border: 1px solid rgb(0, 4, 255);
+   border-radius: 50px;
+   display: inline-block;
+   margin: 2rem 0 0;
+   color: rgb(238, 255, 0);
+   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+   transition: background 500ms;
+   text-decoration: none;
+}
+.btn:hover{
+   background: aqua;
+}

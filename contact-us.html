@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Slider and Contact Information</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .slider {
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <h1 class="header-title">CTU-Buddy</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="discussions.html">Discussion</a></li>
+        <li><a href="share-resources.html">Share Resources</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <button id="toggleButton">Toggle Color Pickers</button>
+    <br>
+    <div id="colorPickers" class="hidden">
+        <label for="firstGradientColorPicker">First Gradient Color:</label>
+        <input type="color" id="firstGradientColorPicker">
+        <br>
+        <label for="secondGradientColorPicker">Second Gradient Color:</label>
+        <input type="color" id="secondGradientColorPicker">
+        <br>
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker">
+        <br>
+        <!-- Add preset color buttons -->
+        <div id="presetColors">
+            <button class="preset-color" data-color="#ff0000"></button>
+            <button class="preset-color" data-color="#000000"></button>
+            <button class="preset-color" data-color="#008000"></button>
+            <button class="preset-color" data-color="#800080"></button>
+        </div>
+
+    </div>
+  
+
+  <!-- Image Slider -->
+  <div class="slider">
+    <img src="https://plus.unsplash.com/premium_photo-1679547202572-bb3a34c54130?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 1">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 2">
+    <img src= "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 3">
+    
+  </div>
+
+  
+  <!-- Contact Information -->
+  <h2>Contact Information</h2>
+  <div class="section">
+  <p>Email: ctubuddy@gmail.com</p>
+  <p>Phone: 082 456 7890</p>
+</div>
+  <!-- Social Media Links -->
+  <h2>Social Media</h2>
+  <div>
+  <ul>
+    <li><a href="https://www.facebook.com/">Facebook</a></li>
+    <li><a href="https://www.twitter.com/">Twitter</a></li>
+    <li><a href="https://www.instagram.com/">Instagram</a></li>
+    
+  </ul>
+  </div>
+
+  <h2>Contact Us</h2>
+  <form>
+    <div class="section">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+  
+    <button type="submit">Submit</button>
+  </div>
+  </form>
+  <div class="section">
+  <h4>Campus Location</h4>
+  <p>Visit our campus at the following address:</p>
+  <p><a href="https://goo.gl/maps/gAjGSFyhdPi5A8ay8" target="_blank">Google Maps Location</a></p>
+
+
+  <!-- Add the image after the Google Maps link -->
+  <p><img src="https://za.africabz.com/map/249369.png" alt="Campus Map"></p>
+
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+<footer>
+  <p>&copy; 2023 CTU-Buddy | All rights reserved by BlackHatSociety</p>
+</footer>
+</html>
